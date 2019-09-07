@@ -1,4 +1,4 @@
 module.exports = {
-  parser: 'babylon',
+  parser: 'babel',
   singleQuote: true
 };

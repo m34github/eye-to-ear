@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 
 import Upload from './components/Upload.jsx';
+import Convert from './components/Convert.jsx';
+import Play from './components/Play.jsx';
 
 class App extends React.Component {
   render() {
@@ -15,6 +17,8 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route path="/upload" component={Upload} />
+          <Route path="/convert" component={Convert} />
+          <Route path="/play" component={Play} />
           <Redirect to="/upload" />
         </Switch>
       </Router>
