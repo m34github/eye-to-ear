@@ -1,0 +1,7 @@
+{
+  "name": "Eye-To-Ear",
+  "short_name": "E2E",
+  "description": "eye to ear",
+  "start_url": "/index.html",
+  "display": "standalone"
+}

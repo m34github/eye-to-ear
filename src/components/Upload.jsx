@@ -18,6 +18,8 @@ class Upload extends React.Component {
     reader.readAsDataURL(file);
   };
 
+  componentDidMount() {}
+
   render() {
     if (this.state.isUploaded) {
       return (

@@ -28,6 +28,10 @@ class Convert extends React.Component {
       });
   };
 
+  componentDidMount() {
+    this.api();
+  }
+
   render() {
     if (this.state.isConverted) {
       return (
@@ -36,7 +40,7 @@ class Convert extends React.Component {
             pathname: '/play',
             state: {
               pic: this.state.pic,
-              result: this.state.result
+              results: this.state.result
             }
           }}
         />
@@ -52,28 +56,6 @@ class Convert extends React.Component {
           }}
         >
           <h1>To</h1>
-          <section style={style.buttonSection}>
-            <section>
-              <button
-                style={style.backButton}
-                onClick={() => {
-                  this.props.history.push('/upload');
-                }}
-              >
-                Back
-              </button>
-            </section>
-            <section>
-              <button
-                className="button-primary"
-                onClick={() => {
-                  this.api();
-                }}
-              >
-                Convert
-              </button>
-            </section>
-          </section>
         </section>
       </article>
     );
@@ -94,9 +76,6 @@ const style = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
-  },
-  backButton: {
-    background: '#fff'
   }
 };
 
